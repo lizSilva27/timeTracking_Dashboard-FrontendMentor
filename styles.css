@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --lightred_work: hsl(15, 100%, 70%);
+  --softblue_play: hsl(195, 74%, 62%);
+  --lightred_study: hsl(348, 100%, 68%);
+  --limegreen_exercise: hsl(145, 58%, 55%);
+  --violet_social: hsl(264, 64%, 52%);
+  --softOrange_self_care: hsl(43, 84%, 65%);
+  --VeryDarkBlue: hsl(226, 43%, 10%);
+  --DarkBlue: hsl(235, 46%, 20%);
+  --DesaturatedBlue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Rubik", "Montserrat", sans-serif;
+	background-color: var(--VeryDarkBlue);
+	color: var(--PaleBlue);
+}
+
+.main-container {
+	/* border: 1px solid white; */
+	width: 328px;
+	margin: 77px auto;
+}
+
+.firstSection {
+	/* border: 2px solid yellow; */
+	position: relative;
+}
+
+.main-card__profile {
+	background-color: var(--blue);
+	/* justify-content: center; */
+	/* align-items: center; */
+	display: flex;
+	border-radius: 14px;
+	padding: 30px;
+	gap: 10px;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+}
+
+.main-card__image {
+	width: 72px;
+	border: 3px solid var(--white);
+	border-radius: 50%;
+	/* margin-right: 10px;> */
+}
+
+.main-card__title {
+	font-size: 0.9em;
+	margin: 10px 0 4px;
+}
+
+.main-card__name {
+	color: var(--white);
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+.main-card__perodicity {
+	background-color: var(--DarkBlue);
+	border-radius: 0 0 14px 14px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100px;
+	font-size: 1.2em;
+	position: absolute;
+	width: 100%;
+	top: 125px;
+}
+
+.main-card__frequency:hover {
+	cursor: pointer;
+	color: var(--white);
+}
+
+.second-section {
+	padding-top: 240px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.card {
+	position: relative;
+	margin-bottom: 90px;
+}
+
+.card__background {
+	background-color: var(--lightred_work);
+	height: 80px;
+	border-radius: 14px 14px 0 0;
+	overflow: hidden;
+	text-align: end;
+	padding: 0 20px;
+}
+
+.card__image {
+	margin-top: -10px;
+	/* padding-left: 235px; */
+}
+
+.card__details {
+	background-color: var(--DarkBlue);
+	display: flex;
+	flex-direction: column;
+	height: 122px;
+	justify-content: space-between;
+	padding: 25px;
+	border-radius: 14px;
+	position: absolute;
+	width: 100%;
+	bottom: -85px;
+}
+
+.card__details:hover {
+	background-color: var(--DesaturatedBlue);
+	cursor: pointer;
+}
+
+.card__title {
+	font-weight: 500;
+	font-size: 1.2em;
+	color: var(--white);
+}
+
+.card__activity, .card__time {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__hour {
+	font-size: 2em;
+	font-weight: 300;
+	color: var(--white);
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+	margin-bottom: 30px;
+}
+.attribution a {
+  color: var(--DesaturatedBlue);
+}
+
+@media screen and (min-width: 1200px)  {
+	.main-container {
+		width: 1150px;
+		display: flex;
+	}
+
+	.main-card__profile {
+		height: 350px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.firstSection {
+		width: 290px;
+		height: 565px;
+		padding-top: 13px;
+	}
+
+	.second-section {
+		height: 565px;
+		width: 860px;
+		padding-top: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 15px 24px;
+	}
+
+	.main-card__image {
+		width: 85px;
+		margin-bottom: 35px;
+	}
+
+	.main-card__title {
+		font-size: 1em;
+	}
+
+	.main-card__name {
+		font-size: 2.3em;
+	}
+
+	.main-card__perodicity {
+		margin-top: 212px;
+		height: 200px;
+		flex-direction: column;
+		align-items: start;
+		padding: 40px 32px 18px;
+	}
+
+	.card {
+		width: 240px;
+		height: 245px;
+		margin-bottom: 10px;
+	}
+
+	.card__details {
+		height: 200px;
+		bottom: 0px;
+	}
+
+	.card__time {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.card__hour {
+		margin-bottom: 10px;
+	}
+}
